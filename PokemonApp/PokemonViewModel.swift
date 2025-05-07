@@ -67,6 +67,7 @@ class PokemonViewModel: ObservableObject {
             print("Invalid URL for search")
             return
         }
+        
         print("Fetching Pokémon: \(name)")
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             print("Finished request for: \(name)")

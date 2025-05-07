@@ -8,6 +8,9 @@
 import Foundation
 
 struct PokemonResponse: Codable {
+    let count: Int
+    let next: String?
+    let previous: String?
     let results: [Pokemon]
 }
 
@@ -32,6 +35,8 @@ struct Sprite: Codable {
 struct Ability: Codable, Identifiable {
     var id: String { ability.name }
     let ability: AbilityType
+    let is_hidden: Bool
+    let slot: Int
 }
 
 struct AbilityType: Codable {
