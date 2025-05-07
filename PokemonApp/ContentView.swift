@@ -38,6 +38,11 @@ struct ContentView: View {
                     }
                     .disabled(searchText.isEmpty)
                     .padding(.trailing)
+                    
+                    Button("Reset") {
+                        viewModel.fetchPokemon()
+                    }
+                    .padding(.trailing)
                 }
                 
                 NavigationStack {
